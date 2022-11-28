@@ -8,13 +8,8 @@ export default class XRay{
 	private model: MRE.Actor = null;
 	private mat: MRE.Material = null;
 
-	private alphaValue = 0.9;
-
 	private slider: MRE.Actor = null;
 	private sliderPuck: MRE.Actor = null;
-	private btnIncrease: MRE.Actor = null;
-	private btnDecrease: MRE.Actor = null;
-
 	constructor(private context: MRE.Context){
 		this.context.onStarted(() => this.started());
 	}
@@ -30,7 +25,7 @@ export default class XRay{
 			actor: {
 				name: 'Text',
 				transform: {
-					local: { position: { x: 0.5, y: -0.5, z: 0 } }
+					local: { position: { x: 0, y: -0.5, z: 0 } }
 				},
 				text: {
 					contents: "XRay controller",
